@@ -1,0 +1,6 @@
+{
+  "name": "Generative AI Trends Observatory",
+  "description": "An authoritative technology radar, analytical report, and interactive intelligence observatory detailing the key frontiers and shifts across generative AI for 2025–2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
