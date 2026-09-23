@@ -16,6 +16,7 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedTrend, setSelectedTrend] = useState<TrendItem | null>(null);
+  const [hoveredTrendId, setHoveredTrendId] = useState<string | null>(null);
   const [isBriefOpen, setIsBriefOpen] = useState<boolean>(false);
 
   // Filter trends based on search query and category
@@ -61,12 +62,14 @@ export default function App() {
           onExploreRadar={handleExploreRadar}
         />
 
-        {/* Technology Radar Matrix */}
+        {/* Technology Radar Matrix & Concentric Graph */}
         <RadarSection
           trends={filteredTrends}
           onSelectTrend={(trend) => setSelectedTrend(trend)}
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
+          hoveredTrendId={hoveredTrendId}
+          setHoveredTrendId={setHoveredTrendId}
         />
 
         {/* Key Trends Curatorial Monographs */}
